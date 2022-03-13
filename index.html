@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div id="boas">
+    
+            <h1>Seja bem vindo !!!</h1>
+    
+            <p>Complete os seus dados.</p>
+    
+        </div>
+        <div id="norm">
+    
+            <p>Nome:</p>
+            <input type="text" id="nome">
+    
+            <p>Sobrenome:</p>
+            <input type="text" id="sob">
+    
+            <p>Idade:</p>
+            <input type="number" name="" id="ida">
+
+        </div>
+        <div id="mix">
+    
+            <p>Email:</p>
+            <input type="email" name="" id="email">
+    
+            <p>Endereço:</p>
+            <input type="text" id="end">
+
+        </div>
+
+        <button id="enviar" onclick="enviar()" >Enviar</button>
+
+    </section>
+
+    
+<script>
+
+    var a=document.getElementById('enviar')
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
+    function entrar(){
+        a.style.borderRadius='50px'
+        a.style.transitionProperty='all'
+        a.style.transitionDuration='0.5s'
+        a.style.cursor='pointer'
+        a.style.boxShadow='#27E793 0px 0px 15px'
+
+    }
+
+    function sair(){
+        a.style.borderRadius='7px'
+        a.style.boxShadow='#27E793 0px 0px 0px'
+    }
+
+    function enviar(){
+
+        var nome=document.getElementById('nome')
+        var sob=document.getElementById('sob')
+        var ida=document.getElementById('ida')
+        var email=document.getElementById('email')
+        var end=document.getElementById('end')
+
+        var nome=String(nome.value)
+        var sob=String(sob.value)
+        var ida=Number(ida.value)
+        var email=String(email.value)
+        var end=String(end.value)
+
+        console.log(nome);
+        console.log(sob)
+        console.log(ida)
+        console.log(email)
+        console.log(end)
+
+
+    }
+</script>
+</body>
+</html>
